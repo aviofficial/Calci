@@ -1,0 +1,25 @@
+﻿			<>Expression Evaluation<>
+
+		:Allowed Operators:
+OPeration               keyword	|	OPeration		Keyword
+Addition:                +	|	Sine:                    sin
+Subtraction:             -	|	Cosine:                  cos
+Multiplication:          *	|	Tangent:                 tan
+Division:                /	|	SineInverse:             sini
+Log base 10:             log	|	CosineInverse:           cosi
+Log base e:              loge	|	TangentInverse:          tani
+SquareRoot:		 sqrt	|	Square:			 square
+CubeRoot:		 cbrt	|	Cube:			 cube
+Power(a^b)               ^	|	Modulous                 modx
+Reciprocal               rcpl	|
+
+Instructions:-
+	Use Brackets with operations(log,loge,sin,cos,tan,sini,cosi,tani,sqrt,cbrt,square,cube,^)
+	e.g:-
+		-> 2+3*log(a)
+		-> 2^(2^(2))
+		-> 2+cos(90)
+
+
+:Enter the expression:
+ \/

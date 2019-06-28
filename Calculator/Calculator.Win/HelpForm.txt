@@ -1,0 +1,111 @@
+﻿			Calculator Application Help
+		------------------------------------
+
+OverView:
+	This Application provides you with a GUI to perform various Scientific Calculations.
+
+How to Use:
+	->Click the button to enter the numbers and operations.
+	->Click the "=" to perform the calculation that you entered.
+	->You can use ShortCut Keys instead of Clicking if you want.
+	->Hold Right Click and Wiggle on a button to see Details about it and its ShortCut Key.
+	->Menu Bar can be used by clicking on it.
+	->Exit on Menu Bar Closes the Application.
+	
+Necessary Instruction:
+	-> Always close all the brackets for correct answer.
+	-> The Angles should be given in degrees.
+
+MAthematical Operations Provided:
+	->Addition:
+		Performs sum of two numbers. Used as "a+b" where a and b are numbers.
+		e.g:-  2+3
+	->Substraction
+		Performs substraction of two numbers. Used as "a-b" where a and b are numbers.
+		e.g:-  2-3
+	->Multiplication
+		Performs multiplication of two numbers. Used as "axb" where a and b are numbers.
+		e.g:-  2x3
+	->Division
+		Performs divisn. Used as "a÷b" where a and b are numbers and a is being divided by b.
+		e.g:-  9÷3
+	->Log base 10:
+		Calculates the Log(base 10) value of a number. log(x)
+		e.g:--  log(10)
+	->Log base e:
+		Calculates the Log(base e) value of a number. ln(x)
+		e.g:--  ln(10)
+	->Reciprocal:
+		Calculates the reciprocal of a number. rcpl(x)
+		e.g:--  rcpl(10)
+	->Sin:
+		Calculates the sine value of an angle. sin(x)
+		e.g:--  sin(10)
+	->Cos:
+		Calculates the cosine value of an angle. cos(x)
+		e.g:--  cos(10)
+	->Tan:
+		Calculates the tangent value of an angle. tan(x)
+		e.g:--  tan(10)
+	->Sin Inverse:
+		Calculates the angle from a sine value. sin-1(x)
+		e.g:--  sin-1(10)
+	->Cos Inverse:
+		Calculates the angle from a cosine value. cos-1(x)
+		e.g:--  cos-1(10)
+	->Tan Inverse:
+		Calculates the angle from a tangent value. sin-1(x)
+		e.g:--  sin-1(10)
+	->Square:
+		Calculates the square of a number. sqr(x)
+		e.g:--  sqr(10)
+	->Cube:
+		Calculates the cube of a number. cube(x)
+		e.g:--  cube(10)
+	->Power:
+		a^b calculates a raised to the power b.
+		e.g:--  a^(b)
+	->Square Root:
+		Calculates the square root of a number. √(x)
+		e.g:--  √(10)
+	->Cube Root:
+		Calculates the cube root of a number. ∛(x)
+		e.g:--  ∛(9)
+	->Root:
+		Calculates the nth root of a number. n root(x)
+		e.g:--  4root(64);
+	->Percent:
+		Calculates Percentage. x/y%
+		e.g:--  20/100 %
+	->Modulous:
+		a mod b , Calclates the remainder when a is divided ny b.
+		e.g:--  20 mod 6
+
+Other Operations:
+	->Memory Store(MS):
+		Stores Current number on the Calculator Display to memory.
+	->Memory Read(MR):
+		Reads the number which is stored in memory store.
+	->Memory Add(M+):
+		Adds the number on the screen to the number in the memory store and then saves the result in memory store.
+	->MEmory Substract(M-):
+		Substract the number on the screen to the number in the memory store and then saves the result in memory store.
+	->Memory Clear(MC):
+		Clears the contents of memory Store.
+	->All CLear(AC):
+		Clears the contents currently on the calculator display.
+	->Answer (Ans):
+		Fetches the previous result and puts it on the calculator screen.
+
+Menu Bar Actions:
+	->Edit:
+		->Copy:
+			Copies the selected or all content of the calculator display.
+		->Cut:
+			Cuts the selected or all conetent of the calculator display.
+		->Paste:
+			Pastes the content of the clipboard on the calculator display.
+	->Exit:
+		Exits the Application.
+	->Help:
+		Opens Help Document.

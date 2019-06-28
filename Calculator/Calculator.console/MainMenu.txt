@@ -1,0 +1,21 @@
+﻿                        <>Calculator<>
+
+                ---Available Operations---
+
+OPeration               keyword	|	OPeration		Keyword
+Addition:                add	|	Sine:                    sin
+Subtraction:             sub	|	Cosine:                  cos
+Multiplication:          mul	|	Tangent:                 tan
+Division:                div	|	SineInverse:             sini
+Log base 10:             log	|	CosineInverse:           cosi
+Log base e:              loge	|	TangentInverse:          tani
+SquareRoot:		 sqrt	|	Square:			 square
+CubeRoot:		 cbrt	|	Cube:			 cube
+Power(a^b)               pow	|	Modulous                 modx
+Reciprocal               rcpl	|
+
+Exit                    0
+Expression Evaluator    e
+
+Enter:	keyword of operation(e.g add for addition)
+\/
