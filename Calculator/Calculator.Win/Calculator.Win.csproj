@@ -106,9 +106,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HelpForm.txt">
+    <EmbeddedResource Include="HelpForm.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

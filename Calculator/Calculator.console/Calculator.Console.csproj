@@ -62,12 +62,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ExpressionMenu.txt">
+    <EmbeddedResource Include="ExpressionMenu.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="MainMenu.txt">
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MessageToUser.resx">

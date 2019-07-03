@@ -1,11 +1,14 @@
 ﻿using System;
+using System.IO;
+using System.Reflection;
+using System.Resources;
 
 namespace Calculator.Console
 {
     class Program
     {
-        static readonly string _menuFile = @".\MainMenu.txt";
-        static readonly string _expressionMenuFile = @".\ExpressionMenu.txt";
+        static readonly string _menuFile = "Calculator.console.MainMenu.txt";
+        static readonly string _expressionMenuFile = "Calculator.console.ExpressionMenu.txt";
         static Lib.CalcEngine _calculation = new Lib.CalcEngine();
         static void Main(string[] args)
         {
@@ -50,14 +53,7 @@ namespace Calculator.Console
             {
                 System.Console.Clear();
                 System.Console.ForegroundColor = ConsoleColor.Cyan;
-                if (System.IO.File.Exists(_menuFile))
-                {
-                    System.Console.WriteLine(System.IO.File.ReadAllText(_menuFile));
-                }
-                else {
-                    System.Console.WriteLine("Menu Data File Not Found.");
-                }
-
+                ReadData(_menuFile);
                 operation = System.Console.ReadLine().Trim();
 
                 if (operation == "0")
@@ -105,13 +101,7 @@ namespace Calculator.Console
             System.Console.Clear();
             System.Console.ForegroundColor = ConsoleColor.Green;
 
-            if (System.IO.File.Exists(_expressionMenuFile))
-            {
-                System.Console.WriteLine(System.IO.File.ReadAllText(_expressionMenuFile));
-            }
-            else {
-                System.Console.WriteLine("Expression Menu Data File Not Found.");
-            }
+            ReadData(_expressionMenuFile);
             string expression = System.Console.ReadLine().Trim();
 
             try
@@ -123,5 +113,12 @@ namespace Calculator.Console
             }
         }
 
+        //reads data from embedded resources
+        private static void ReadData(string fileName) {
+            Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(fileName);
+            StreamReader reader = new StreamReader(stream);
+            string result = reader.ReadToEnd();
+            System.Console.WriteLine(result);
+        }
     }
 }

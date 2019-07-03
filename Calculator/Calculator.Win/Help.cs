@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Drawing;
+using System.IO;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace Calculator.Win
@@ -7,7 +9,7 @@ namespace Calculator.Win
     public partial class Help : Form
     {
         private TextBox txtBoxMain;
-        String _helpFile = @".\HelpForm.txt";
+        String _helpFile = "Calculator.Win.HelpForm.txt";
         public Help()
         {
             InitializeComponent();
@@ -26,12 +28,10 @@ namespace Calculator.Win
             this.txtBoxMain.Font = new Font("Arial", 12);
             //text loading
 
-            if (System.IO.File.Exists(_helpFile))
-            {
-                this.txtBoxMain.Text = System.IO.File.ReadAllText(_helpFile);
-            }
-            else {
-                
+            using (Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(_helpFile))
+            using (StreamReader reader = new StreamReader(stream))
+            { 
+                this.txtBoxMain.Text=reader.ReadToEnd();
             }
             //Help Form
             this.ClientSize = new Size(700, 700);

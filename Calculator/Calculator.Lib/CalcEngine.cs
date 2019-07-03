@@ -209,8 +209,7 @@ namespace Calculator.Lib
             Stack<string> operators = new Stack<string>();
             Stack<double> operands = new Stack<double>();
             expression = expression.ToLower();
-            expression = System.Text.RegularExpressions.Regex.Replace(expression, @"(\/|\*)(\+|\-)([0-9\.]*)", @"$1(0$2$3)");
-
+            expression = System.Text.RegularExpressions.Regex.Replace(expression, @"(\/|\*|\+|\-)(\+|\-)([0-9\.]*)", @"$1(0$2$3)");
             for (int i = 0; i < expression.Length; i++) {
                //loop to parse through the expression
                 if (expression[i] == ' ') {
