@@ -52,6 +52,15 @@
     <Compile Include="Calci.Designer.cs">
       <DependentUpon>Calci.cs</DependentUpon>
     </Compile>
+    <Compile Include="ButtonX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ToolTipText.Designer.cs">

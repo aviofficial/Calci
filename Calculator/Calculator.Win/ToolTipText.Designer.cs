@@ -61,7 +61,7 @@ namespace Calculator.Win {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Number 0 (Key:-&gt;  0).
+        ///   Looks up a localized string similar to Number 0 (Key:-&gt;  0) .
         /// </summary>
         internal static string _0 {
             get {
@@ -187,7 +187,7 @@ namespace Calculator.Win {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Closing Brackets|   )   |(Key:-&gt; ) or Shift+0).
+        ///   Looks up a localized string similar to Closing Brackets|   )   |(Key:-&gt; Shift+0).
         /// </summary>
         internal static string closebrace {
             get {
@@ -259,11 +259,20 @@ namespace Calculator.Win {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Performs the calculation (Key:-&gt; =,Enter).
+        ///   Looks up a localized string similar to Performs the calculation (Key:-&gt; =).
         /// </summary>
         internal static string EqualsTo {
             get {
                 return ResourceManager.GetString("EqualsTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exits The Application..
+        /// </summary>
+        internal static string exit {
+            get {
+                return ResourceManager.GetString("exit", resourceCulture);
             }
         }
         
@@ -300,6 +309,24 @@ namespace Calculator.Win {
         internal static string MC {
             get {
                 return ResourceManager.GetString("MC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cut, Copy and Paste options..
+        /// </summary>
+        internal static string menuEdit {
+            get {
+                return ResourceManager.GetString("menuEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Opens HELP document.
+        /// </summary>
+        internal static string menuHelp {
+            get {
+                return ResourceManager.GetString("menuHelp", resourceCulture);
             }
         }
         
@@ -358,7 +385,7 @@ namespace Calculator.Win {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Opening Brackets|   (   |(Key:-&gt; ( or Shift+9).
+        ///   Looks up a localized string similar to Opening Brackets|   (   |(Key:-&gt; Shift+9).
         /// </summary>
         internal static string openbrace {
             get {
@@ -376,7 +403,7 @@ namespace Calculator.Win {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Percentage|  x % |(ShortCutKey:-&gt;Shift+5 or %).
+        ///   Looks up a localized string similar to Percentage|  x % |(ShortCutKey:-&gt;Shift+5).
         /// </summary>
         internal static string percent {
             get {
@@ -385,7 +412,7 @@ namespace Calculator.Win {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Addition(Sum) Operator|   a+b   |  (Key:- &gt;   +).
+        ///   Looks up a localized string similar to Addition(Sum) Operator|   a+b   |  (Key:- &gt;   Shift + =).
         /// </summary>
         internal static string plus {
             get {
@@ -394,7 +421,7 @@ namespace Calculator.Win {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a raised to the power b|    a^(b)   |(ShortCut KEy:-&gt; Shift+6 or ^).
+        ///   Looks up a localized string similar to a raised to the power b|    a^(b)   |(ShortCut KEy:-&gt; Shift+6).
         /// </summary>
         internal static string power {
             get {

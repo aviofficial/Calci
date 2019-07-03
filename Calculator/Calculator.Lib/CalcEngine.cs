@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Calculator.Lib
 {
-    public class CalcEngine : CalcEngineInterface
+    public class CalcEngine : ICalcEngineInterface
     {
         readonly string[] _operatorsBinary = { "add", "sub", "mul", "div", "+", "-", "*", "/", "^", "logx", "root", "modx" };
-        readonly string[] _operatorsUnary = { "sin", "cos", "tan", "log", "loge", "sini", "cosi", "tani", "sqrt", "cbrt", "sqr", "sign", "cube", "rcpl" };
+
+        private enum _operatorsUnary { sin, cos, tan, log, loge, sini, cosi, tani, sqrt, cbrt, sqr, sign, cube, rcpl };
         #region Arithmetic Operations
         //Method for Addition operation
         public double Add(double a, double b) {
@@ -191,7 +192,7 @@ namespace Calculator.Lib
         //returns true if operation is valid operation requires one operand
         public bool IsUnary(string operation) {
             
-            return(_operatorsUnary.Contains(operation)) ;
+            return(System.Enum.IsDefined(typeof(_operatorsUnary),operation)) ;
         }
         //returns true if operation is valid requires two operands
         public bool IsBinary(string operation) {
@@ -208,6 +209,7 @@ namespace Calculator.Lib
             Stack<string> operators = new Stack<string>();
             Stack<double> operands = new Stack<double>();
             expression = expression.ToLower();
+            expression = System.Text.RegularExpressions.Regex.Replace(expression, @"(\/|\*)(\+|\-)([0-9\.]*)", @"$1(0$2$3)");
 
             for (int i = 0; i < expression.Length; i++) {
                //loop to parse through the expression
@@ -311,11 +313,14 @@ namespace Calculator.Lib
                 double temp = Calculate(operation, operands.Pop());
                 if (double.IsInfinity(temp))
                 {
-                    throw new Exception("InfinityAnswer");
+                    throw new InfinityAnswerException();
                 }
-                else
+                else if (double.IsNaN(temp))
                 {
-                    return(temp);
+                    throw new Exception("Invalid Input");
+                }
+                else {
+                    return (temp);
                 }
             }
             try
@@ -366,6 +371,16 @@ namespace Calculator.Lib
                 default:
                     return (-1);
             }
+        }
+    }
+
+    class InfinityAnswerException : Exception
+    {
+        public InfinityAnswerException()
+        { 
+        }
+        public override string Message {
+            get { return ("Answer Reached Infinity"); }
         }
     }
 }

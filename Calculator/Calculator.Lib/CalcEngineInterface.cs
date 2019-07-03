@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculator.Lib
 {
-    interface CalcEngineInterface
+    interface ICalcEngineInterface
     {
         double Add(double a, double b);
         double Subtract(double a, double b);

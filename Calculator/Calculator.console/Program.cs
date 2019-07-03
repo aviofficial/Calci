@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculator.Console
 {
@@ -13,22 +9,18 @@ namespace Calculator.Console
         static Lib.CalcEngine _calculation = new Lib.CalcEngine();
         static void Main(string[] args)
         {
-            
+            //if command line argument is there
             if (args.Length > 0)
-            {//if command line argument is there
-                System.Console.WriteLine("Expression = {0}", String.Join("", args));
+            {
+                System.Console.WriteLine(console.MessageToUser.exp+String.Join("", args));
                 try
                 {
-                    System.Console.WriteLine("Answer = {0}", _calculation.Evaluate((string.Join("", args))));
-                }
-                catch (DivideByZeroException)
-                {
-                    System.Console.WriteLine("Cannot Divide By Zero");
+                    System.Console.WriteLine(console.MessageToUser.ans+_calculation.Evaluate((string.Join("", args))));
                 }
                 catch (Exception e) {
                     System.Console.WriteLine(e.Message);
                 }
-                System.Console.WriteLine("Do you wish to continue(y/n):--");
+                System.Console.WriteLine(console.MessageToUser.continuePrompt);
                 String choice = System.Console.ReadLine().Trim().ToLower();
                 switch (choice.ToLower())
                 {
@@ -75,30 +67,38 @@ namespace Calculator.Console
                 else if (operation == "e") {
                     ExpressionEvaluator();
                 }
-
-                try
+                bool validity = true;
+                do
                 {
-                    if (_calculation.IsUnary(operation))
+                    try
                     {
-                        System.Console.WriteLine("Enter Operand:-");
-                        double op1 = Convert.ToDouble(System.Console.ReadLine());
-                        System.Console.WriteLine("Answer " + _calculation.Calculate(operation, op1));
-                    }
-                    else if (_calculation.IsBinary(operation))
-                    {
-                        System.Console.WriteLine("Enter first operands");
-                        double op1 = Convert.ToDouble(System.Console.ReadLine());
-                        System.Console.WriteLine("Enter second operands");
-                        double op2 = Convert.ToDouble(System.Console.ReadLine());
-                        System.Console.WriteLine("Answer: " + _calculation.Calculate(operation, op1, op2));
-                    }
-                }
-                catch (FormatException) {
-                    System.Console.WriteLine("!!!!!!Invalid Operand Entered!!!!!");
+                        if (_calculation.IsUnary(operation))
+                        {
+                            System.Console.WriteLine(console.MessageToUser.askOperand);
+                            double op1 = Convert.ToDouble(System.Console.ReadLine());
+                            System.Console.WriteLine(console.MessageToUser.ans + _calculation.Calculate(operation, op1));
                         }
-                System.Console.WriteLine("Do you wish to continue(y/n):--");
+                        else if (_calculation.IsBinary(operation))
+                        {
+                            System.Console.WriteLine(console.MessageToUser.askOperand);
+                            double op1 = Convert.ToDouble(System.Console.ReadLine());
+                            System.Console.WriteLine(console.MessageToUser.askOperand2);
+                            double op2 = Convert.ToDouble(System.Console.ReadLine());
+                            System.Console.WriteLine(console.MessageToUser.ans + _calculation.Calculate(operation, op1, op2));
+                            
+                        }
+                        validity = true;
+                    }
+                    catch (FormatException)
+                    {
+                        validity = false;
+                        System.Console.WriteLine(console.MessageToUser.OpInvalid);
+                    }
+                } while (validity == false);
+
+                System.Console.WriteLine(console.MessageToUser.continuePrompt);
                 choice = System.Console.ReadLine();
-            } while (choice.ToLower() == "y");
+            } while (choice.ToLower() == "y" || choice.ToLower() == "yes");
         }
         //method to display info about expression evaluator use which displays answer when a expression is input.
         static void ExpressionEvaluator() {
@@ -116,7 +116,7 @@ namespace Calculator.Console
 
             try
             {
-                System.Console.WriteLine("Answer: " + _calculation.Evaluate(expression));
+                System.Console.WriteLine(console.MessageToUser.ans + _calculation.Evaluate(expression));
             }
             catch (Exception e) {
                 System.Console.WriteLine(e.Message);

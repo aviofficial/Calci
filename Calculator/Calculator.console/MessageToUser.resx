@@ -117,154 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="percent" xml:space="preserve">
-    <value>Percentage|  x % |(ShortCutKey:-&gt;Shift+5)</value>
+  <data name="ans" xml:space="preserve">
+    <value>Answer:- </value>
   </data>
-  <data name="multiply" xml:space="preserve">
-    <value>Multiplication(Product) Operator|   axb    | (Key:- &gt;   *)</value>
+  <data name="askOperand" xml:space="preserve">
+    <value>Enter Operand :-</value>
   </data>
-  <data name="plus" xml:space="preserve">
-    <value>Addition(Sum) Operator|   a+b   |  (Key:- &gt;   Shift + =)</value>
+  <data name="askOperand2" xml:space="preserve">
+    <value>Enter 2nd Operand :-</value>
   </data>
-  <data name="minus" xml:space="preserve">
-    <value>Substraction(Difference) Operator|    a-b   |  (Key:- &gt;   -)</value>
+  <data name="continuePrompt" xml:space="preserve">
+    <value>Do You Wish To Continue(Yes/No)?</value>
   </data>
-  <data name="decimal" xml:space="preserve">
-    <value>Decimal Point (Key:-&gt; . )</value>
+  <data name="exp" xml:space="preserve">
+    <value>Expression:- </value>
   </data>
-  <data name="divide" xml:space="preserve">
-    <value>Division Operator |   a÷b   |  (Key:- &gt;   /)</value>
-  </data>
-  <data name="0" xml:space="preserve">
-    <value>Number 0 (Key:-&gt;  0) </value>
-  </data>
-  <data name="1" xml:space="preserve">
-    <value>Number 1 (Key:-&gt;  1)</value>
-  </data>
-  <data name="2" xml:space="preserve">
-    <value>Number 2 (Key:-&gt;  2)</value>
-  </data>
-  <data name="3" xml:space="preserve">
-    <value>Number 3 (Key:-&gt;  3)</value>
-  </data>
-  <data name="4" xml:space="preserve">
-    <value>Number 4 (Key:-&gt;  4)</value>
-  </data>
-  <data name="5" xml:space="preserve">
-    <value>Number 5 (Key:-&gt;  5)</value>
-  </data>
-  <data name="6" xml:space="preserve">
-    <value>Number 6 (Key:-&gt;  6)</value>
-  </data>
-  <data name="7" xml:space="preserve">
-    <value>Number 7 (Key:-&gt;  7)</value>
-  </data>
-  <data name="8" xml:space="preserve">
-    <value>Number 8 (Key:-&gt;  8)</value>
-  </data>
-  <data name="9" xml:space="preserve">
-    <value>Number 9 (Key:-&gt;  9)</value>
-  </data>
-  <data name="AC" xml:space="preserve">
-    <value>All Clear (ShortcutKey:-&gt;  Shift+A )</value>
-  </data>
-  <data name="backspace" xml:space="preserve">
-    <value>Delete Backs a Character or Selected Text | (Key:- BackSpace)</value>
-  </data>
-  <data name="Ans" xml:space="preserve">
-    <value>Previous Ans (ShortcutKey:-&gt;A )</value>
-  </data>
-  <data name="cos" xml:space="preserve">
-    <value>CoSine value|    Cos(x)    |(Shortcut Key:-&gt;  C )</value>
-  </data>
-  <data name="cosi" xml:space="preserve">
-    <value>CosSineInverse value|   cosi(x)    |(Shortcut Key:-&gt; Shift+C)</value>
-  </data>
-  <data name="cube" xml:space="preserve">
-    <value>Cube |    Cube(x)   |(Shortcut Key:-&gt;Shift+3)</value>
-  </data>
-  <data name="cuberoot" xml:space="preserve">
-    <value>CubeRoot|    ∛(x)     |(Shortcut Key:-&gt; Ctrl+3)</value>
-  </data>
-  <data name="EqualsTo" xml:space="preserve">
-    <value>Performs the calculation (Key:-&gt; =)</value>
-  </data>
-  <data name="ln" xml:space="preserve">
-    <value>Log(base e)|    Log(x)   |(Shortcut Key:-&gt; Shift+L )</value>
-  </data>
-  <data name="log" xml:space="preserve">
-    <value>Log(base10)|    Ln(x)   |(Shortcut Key:-&gt; L)</value>
-  </data>
-  <data name="Madd" xml:space="preserve">
-    <value>Memory Add (ShortcutKey:-&gt;  Ctrl+W)</value>
-  </data>
-  <data name="Mminus" xml:space="preserve">
-    <value>Memory Subtract (ShortcutKey:-&gt;  Ctrk+E)</value>
-  </data>
-  <data name="MC" xml:space="preserve">
-    <value>Memory Clear (ShortcutKey:-&gt;  Ctrl+D)</value>
-  </data>
-  <data name="mod" xml:space="preserve">
-    <value>Remainder when a÷b|   a mod b   |(ShortCut Key:-&gt; M)</value>
-  </data>
-  <data name="MR" xml:space="preserve">
-    <value>Memory Read (ShortcutKey:-&gt;  Ctrl+R)</value>
-  </data>
-  <data name="MS" xml:space="preserve">
-    <value>Memory Store (ShortcutKey:-&gt;  Ctrl+S)</value>
-  </data>
-  <data name="power" xml:space="preserve">
-    <value>a raised to the power b|    a^(b)   |(ShortCut KEy:-&gt; Shift+6)</value>
-  </data>
-  <data name="rcpl" xml:space="preserve">
-    <value>Reciprocal |   rcpl(x)   |(ShortCut Key:-&gt; R)</value>
-  </data>
-  <data name="root" xml:space="preserve">
-    <value>n'th root|   n√(x)   |(ShortCut Key:-&gt; Ctrl+1)</value>
-  </data>
-  <data name="sign" xml:space="preserve">
-    <value>Reverse the sign|   Sign(x)   |(ShortCut Key:-&gt; Shift+R)</value>
-  </data>
-  <data name="sin" xml:space="preserve">
-    <value>Sine value|   Sin(x)    |(Shortcut Key:-&gt; S)</value>
-  </data>
-  <data name="sini" xml:space="preserve">
-    <value>SineInverse|   Sini(x)   |(Shortcut Key:-&gt; Shift+S)</value>
-  </data>
-  <data name="sqr" xml:space="preserve">
-    <value>Square|   sqr(x)   |(Shortcut Key:-&gt;Shift+2)</value>
-  </data>
-  <data name="sqrroot" xml:space="preserve">
-    <value>SquareRoot|   √(x)   |(Shortcut Key:-&gt;Ctrl+2)</value>
-  </data>
-  <data name="tan" xml:space="preserve">
-    <value>Tangent value|   tan(x)   |(Shortcut Key:-&gt; T)</value>
-  </data>
-  <data name="tani" xml:space="preserve">
-    <value>TanInverse value|   tani(x)   |(Shortcut Key:-&gt; Shift+T)</value>
-  </data>
-  <data name="closebrace" xml:space="preserve">
-    <value>Closing Brackets|   )   |(Key:-&gt; Shift+0)</value>
-  </data>
-  <data name="openbrace" xml:space="preserve">
-    <value>Opening Brackets|   (   |(Key:-&gt; Shift+9)</value>
-  </data>
-  <data name="Copy" xml:space="preserve">
-    <value>Copy the selected otherwise all text.|(ShortCut KEy:-&gt; Ctrl+C)</value>
-  </data>
-  <data name="Cut" xml:space="preserve">
-    <value>Cuts the selected otherwise all text.|(ShortCut KEy:-&gt; Ctrl+X)</value>
-  </data>
-  <data name="Paste" xml:space="preserve">
-    <value>Pastes the copied or cut content.|(ShortCut KEy:-&gt; Ctrl+V)</value>
-  </data>
-  <data name="exit" xml:space="preserve">
-    <value>Exits The Application.</value>
-  </data>
-  <data name="menuEdit" xml:space="preserve">
-    <value>Cut, Copy and Paste options.</value>
-  </data>
-  <data name="menuHelp" xml:space="preserve">
-    <value>Opens HELP document</value>
+  <data name="OpInvalid" xml:space="preserve">
+    <value>!!!--Invalid OPerand Entered---!!!</value>
   </data>
 </root>
